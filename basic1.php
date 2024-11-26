@@ -7,8 +7,12 @@
   <title>Document</title>
 </head>
 <body>
+
+  <h1>First Web-Page</h1>
+
   <?php
-  echo "My First Php Script";
+  $txt = "Shobhesh";
+  echo "I am $txt";
   ?>
 </body>
 
