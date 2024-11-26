@@ -1,4 +1,4 @@
-<?php
+<!-- 
 
 //echo str_word_count("Hello world!");
 
@@ -35,22 +35,49 @@
 // var_dump($e);
 
 
-class Car {
-  public $color;
-  public $model;
-  public function __construct($color, $model) {
-    $this->color = $color;
-    $this->model = $model;
-  }
-  public function message() {
-    return "My car is a " . $this->color . " " . $this->model . "!";
-  }
-}
+// class Car {
+//   public $color;
+//   public $model;
+//   public function __construct($color, $model) {
+//     $this->color = $color;
+//     $this->model = $model;
+//   }
+//   public function message() {
+//     return "My car is a " . $this->color . " " . $this->model . "!";
+//   }
+// }
 
-$myCar = new Car("red", "Volvo");
+// $myCar = new Car("red", "Volvo");
 
-// $myCar = (array) $myCar;
-var_dump($myCar);
+// // $myCar = (array) $myCar;
+// var_dump($myCar);
 
 
+// $a = 5;
+
+// $a = (object) $a;
+// var_dump($a);
+
+// $a = array("Volvo", "BMW", "Toyota"); // indexed array
+// $b = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43"); // associative array
+
+// $a = (object) $a;
+// $b = (object) $b;
+
+// var_dump($a);
+// var_dump($b); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<?php
+  echo __DIR__;
 ?>
+</body>
+</html>
+
