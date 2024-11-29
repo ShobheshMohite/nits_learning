@@ -1,35 +1,38 @@
-<?php 
+<?php
 
-$a[] = "Anna";
-$a[] = "Brittany";
-$a[] = "Cinderella";
-$a[] = "Diana";
-$a[] = "Eva";
-$a[] = "Fiona";
-$a[] = "Gunda";
-$a[] = "Hege";
-$a[] = "Inga";
-$a[] = "Johanna";
-$a[] = "Kitty";
-$a[] = "Linda";
-$a[] = "Nina";
-$a[] = "Ophelia";
-$a[] = "Petunia";
-$a[] = "Amanda";
-$a[] = "Raquel";
-$a[] = "Cindy";
-$a[] = "Doris";
-$a[] = "Eve";
-$a[] = "Evita";
-$a[] = "Sunniva";
-$a[] = "Tove";
-$a[] = "Unni";
-$a[] = "Violet";
-$a[] = "Liza";
-$a[] = "Elizabeth";
-$a[] = "Ellen";
-$a[] = "Wenche";
-$a[] = "Vicky";
+$a = [
+  "Anna",
+  "Brittany",
+  "Cinderella",
+  "Diana",
+  "Eva",
+  "Fiona",
+  "Gunda",
+  "Hege",
+  "Inga",
+  "Johanna",
+  "Kitty",
+  "Linda",
+  "Nina",
+  "Ophelia",
+  "Petunia",
+  "Amanda",
+  "Raquel",
+  "Cindy",
+  "Doris",
+  "Eve",
+  "Evita",
+  "Sunniva",
+  "Tove",
+  "Unni",
+  "Violet",
+  "Liza",
+  "Elizabeth",
+  "Ellen",
+  "Wenche",
+  "Vicky"
+];
+
 
 // get the q parameter from URL
 $q = $_REQUEST["q"];
