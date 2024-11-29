@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
 
   <script>
-
     document.addEventListener("DOMContentLoaded", function () {
       // Set the max value for DOB
       document.getElementById("dob").setAttribute("max", new Date().toISOString().split("T")[0]);
@@ -42,14 +41,12 @@
       }
     }
   </script>
-
 </head>
 
 <body>
-
   <form action="processLogin.php" method="POST">
 
-    <h2>Customer Login Form</h2>
+    <h2>Customer Info Form</h2>
 
     <label for="firstname">First Name: </label>
     <input type="text" id="firstname" name="firstname" required />
@@ -81,7 +78,7 @@
     <input type="date" id="dob" name="dob" required>
 
     <label for="mobile">Mobile Number: </label>
-    <input type="text" id="mobile" name="mobile" maxlength="10" pattern="\d{10}" title="Enter a 10-Digit Mobile Number"
+    <input type="text" id="mobile" name="mobile" maxlength="10" title="Enter a 10-Digit Mobile Number"
       required>
 
     <label for="email">Email: </label>
@@ -91,9 +88,12 @@
     <select name="state" id="state" required onchange="loadCities(this.value)">
       <option value="">Select State</option>
       <?php
-      //cities from db
-      $conn = new mysqli('localhost', 'root', '', 'customer_login');
+      $conn = new mysqli("localhost", "root", "", "customer_login");
 
+      // Check connection
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
       $result = $conn->query('SELECT * FROM states');
       while ($row = $result->fetch_assoc()) {
         echo "<option value='{$row['id']}'> {$row['name']} </option>";
