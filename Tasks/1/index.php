@@ -28,7 +28,7 @@
         }
 
         const cities = await response.json();
-        // console.log(cities);
+        // console.log(cities); 
         // Populate the city dropdown
         const cityDropdown = document.getElementById('city');
         cityDropdown.innerHTML = '<option value="">Select City</option>';
@@ -43,7 +43,7 @@
   </script>
 </head>
 
-<body>
+<body> 
   <form action="processLogin.php" method="POST">
 
     <h2>Customer Info Form</h2>
