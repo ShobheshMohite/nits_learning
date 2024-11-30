@@ -7,7 +7,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$fetchSql = "SELECT c.id, c.firstname, c.middlename, c.lastname, c.gender, c.dob, c.mobile, c.email, s.name as s_name, ct.name as c_name 
+$fetchSql = "SELECT c.id, c.firstname, c.middlename, c.lastname, c.gender, c.dob, c.mobile, c.email, s.name as s_name, ct.name as c_name ,c.files
                  FROM customer c
                  JOIN states s ON c.state_id = s.id
                  JOIN cities ct ON c.city_id = ct.id";
@@ -27,7 +27,6 @@ if ($result->num_rows > 0) {
   echo '<h2 style="text-align:center; font">Customer Data</h2>';
   echo '<table border="1" cellpadding="10" cellspacing="0" style="margin: 0 auto; border-collapse: collapse;">';
   echo '<tr>';
-  echo '<th>ID</th>';
   echo '<th>First Name</th>';
   echo '<th>Middle Name</th>';
   echo '<th>Last Name</th>';
@@ -37,13 +36,16 @@ if ($result->num_rows > 0) {
   echo '<th>Email</th>';
   echo '<th>State</th>';
   echo '<th>City</th>';
+  echo '<th>Files</th>';
   echo '<th>Action</th>';
+
   echo '</tr>';
 
   //access all results
   while ($user = $result->fetch_assoc()) {
+
+
     echo '<tr>';
-    echo '<td>' . htmlspecialchars($user['id']) . '</td>';
     echo '<td>' . htmlspecialchars($user['firstname']) . '</td>';
     echo '<td>' . htmlspecialchars($user['middlename']) . '</td>';
     echo '<td>' . htmlspecialchars($user['lastname']) . '</td>';
@@ -53,6 +55,11 @@ if ($result->num_rows > 0) {
     echo '<td>' . htmlspecialchars($user['email']) . '</td>';
     echo '<td>' . htmlspecialchars($user['s_name']) . '</td>';
     echo '<td>' . htmlspecialchars($user['c_name']) . '</td>';
+    // echo '<td><img src="' . htmlspecialchars($user['files']) . 'width="50" height="50"></td>';
+    echo '<td><img src="' . htmlspecialchars($user['files']) . '" width="50" height="50"></td>';
+
+
+    // C:\wamp64\www\php_programs\Tasks\1\uploaded_files\1.png
 
     //add edit button
     echo '<td>';

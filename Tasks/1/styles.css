@@ -88,3 +88,6 @@ form .gender-group input[type="radio"] {
   margin-right: 5px;
 }
 
+#form1 {
+  align-items: center;
+}

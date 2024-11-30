@@ -11,7 +11,7 @@ if (empty($_POST['edit_id'])) {
     die("Customer not found!");
 }
 
-// Check if `edit_id` is set
+// Check if edit_id is set
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_id'])) {
     $edit_id = $_POST['edit_id'];
 
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_id'])) {
 <body>
     <div style="display: flex;
   justify-content: center;">
-    <form method="POST" action="update.php">
+    <form method="POST" action="update.php" enctype="multipart/form-data">
     <h2 style="text-align:center;">Edit Customer Details</h2>
         <input type="hidden" name="update_id" value="<?php echo htmlspecialchars($user['id']); ?>">
 
@@ -110,6 +110,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_id'])) {
             }
             ?>
         </select>
+
+        
+        <label for="file">Select File: </label>
+        <input type="file" id="fileupload" name="upload">
 
         <button type="submit"
             style="padding:10px 20px; background-color:#4CAF50; color:white; border:none; border-radius:5px; font-size:16px;">Update</button>

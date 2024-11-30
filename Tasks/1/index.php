@@ -44,11 +44,12 @@
 </head>
 
 <body> 
-  <form action="processLogin.php" method="POST">
+  <div style="display: ruby-text;">
+  <form action="processLogin.php" method="POST" styles="align-item:center" enctype="multipart/form-data">
 
     <h2>Customer Info Form</h2>
 
-    <label for="firstname">First Name: </label>
+    <label for="firstname">First Name* </label>
     <input type="text" id="firstname" name="firstname" required />
 
     <label for="middleName">Middle Name: </label>
@@ -106,10 +107,14 @@
       <option value="">Select City</option>
     </select>
 
+    <label for="file">Select File: </label>
+    <input type="file" id="fileupload" name="upload">
+
+   
     <button type="submit">Submit</button>
 
   </form>
-
+  </div>
 </body>
 
 </html>
