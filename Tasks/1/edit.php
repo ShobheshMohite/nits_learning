@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_id'])) {
                 }
 
                 const cities = await response.json();
-                // console.log(cities);
+
                 // Populate the city dropdown
                 const cityDropdown = document.getElementById('city');
                 cityDropdown.innerHTML = '<option value="">Select City</option>';

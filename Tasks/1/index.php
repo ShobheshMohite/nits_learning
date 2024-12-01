@@ -48,17 +48,17 @@
   <form action="processLogin.php" method="POST" styles="align-item:center" enctype="multipart/form-data">
 
     <h2>Customer Info Form</h2>
-
+    <div>
     <label for="firstname">First Name* </label>
     <input type="text" id="firstname" name="firstname" required />
 
-    <label for="middleName">Middle Name: </label>
+    <label for="middleName">Middle Name </label>
     <input type="text" id="middlename" name="middlename" />
 
-    <label for="lastName">Last Name: </label>
+    <label for="lastName">Last Name* </label>
     <input type="text" id="lastname" name="lastname" />
 
-    <label for="gender">Gender: </label>
+    <label for="gender">Gender* </label>
     <div class="gender-group">
       <div>
         <input type="radio" id="male" name="gender" value="male" required />
@@ -75,17 +75,17 @@
 
     </div>
 
-    <label for="dob">Date Of Birth: </label>
+    <label for="dob">Date Of Birth* </label>
     <input type="date" id="dob" name="dob" required>
 
-    <label for="mobile">Mobile Number: </label>
+    <label for="mobile">Mobile Number* </label>
     <input type="text" id="mobile" name="mobile" maxlength="10" title="Enter a 10-Digit Mobile Number"
       required>
 
-    <label for="email">Email: </label>
+    <label for="email">Email* </label>
     <input type="email" id="email" name="email" maxlength="100" required>
 
-    <label for="state">State</label>
+    <label for="state">State*</label>
     <select name="state" id="state" required onchange="loadCities(this.value)">
       <option value="">Select State</option>
       <?php
@@ -102,7 +102,7 @@
       ?>
     </select>
 
-    <label for="city">City</label>
+    <label for="city">City*</label>
     <select id="city" name="city" required>
       <option value="">Select City</option>
     </select>
